@@ -1,0 +1,27 @@
+body{
+    background-image: url("../images/ThreeOfThem.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron{
+    font-family: 'Titan One', cursive;
+    font-size: 40px;
+    color: yellow;
+    background-image: url("../images/pokeball.png");
+    height: 100%; 
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    
+}
+.guessThePokemon{
+    position: relative;
+    width: 60%;
+    text-align: center;
+    left: 20%;
+}
+

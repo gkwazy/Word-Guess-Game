@@ -60,6 +60,14 @@ function checkLetters(letter) {
     console.log(blanksAndSuccesses);
 }
 
+function display_image(scr, width, height) {
+    var img = documanet.createElement("img");
+    img.src = src;
+    img.width = width;
+    img.height = height;
+    document.body.appendChild(img);
+}
+
 function roundComplete() {
     console.log("Win count " + winCount + " Lost Count " + lossCount + " gussessLeft: " + guessesLeft);
 
