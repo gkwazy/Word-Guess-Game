@@ -14,7 +14,9 @@ function startGame() {
     selectedWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
     lettersinWord = selectedWord.split("");
     numbBlanks = lettersinWord.length
-    // document.getElementById("endPic").style.opacity = "true";
+    // $(".modal").on("click", function () {
+    //     $('#myInput').trigger('focus')
+    // });
     guessesLeft = 9;
     wrongLetters = [];
     blanksAndSuccesses = [];
@@ -36,7 +38,6 @@ function startGame() {
 }
 
 function checkLetters(letter) {
-    alert(letter);
     var isLetterInWord = false;
 
     for (var i = 0; i < numbBlanks; i++) {
@@ -69,6 +70,7 @@ function display_image(scr, width, height) {
 }
 
 function roundComplete() {
+    //var sadPika = <img src="assets/images/pokemon.png" style="width:100%;height:100%">;
     console.log("Win count " + winCount + " Lost Count " + lossCount + " gussessLeft: " + guessesLeft);
 
     document.getElementById("numGuesses").innerHTML = guessesLeft;
@@ -77,19 +79,27 @@ function roundComplete() {
 
     if (lettersinWord.toString() == blanksAndSuccesses.toString()) {
         winCount++;
-        alert("You Win");
+        document.getElementById("message").innerHTML = "You Win!";
+        document.getElementById("pic").src = "assets/images/pikaWin.gif";
+        $('#myModal').modal({ show: true });
+        console.log("test");
         document.getElementById("winCounter").innerHTML = winCount;
         startGame();
     }
 
     else if (guessesLeft == 0) {
         lossCount++;
-        document.getElementById("endPic").src = "../images/pikaLost.gif"
-        alert("You lost!");
+        document.getElementById("message").innerHTML = "You Lost, Sorry";
+        document.getElementById("pic").src = "assets/images/pikaLost.gif";
+
+        $('#myModal').modal({ show: true });
+        console.log("test");
         document.getElementById("lossCounter").innerHTML = lossCount;
         startGame();
     }
 }
+
+
 
 //Main Method
 
