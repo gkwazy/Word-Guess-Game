@@ -13,8 +13,8 @@ var guessesLeft = 9;
 function startGame() {
     selectedWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
     lettersinWord = selectedWord.split("");
-    numbBlanks = lettersinWord.length;
-
+    numbBlanks = lettersinWord.length
+    // document.getElementById("endPic").style.opacity = "true";
     guessesLeft = 9;
     wrongLetters = [];
     blanksAndSuccesses = [];
@@ -84,6 +84,7 @@ function roundComplete() {
 
     else if (guessesLeft == 0) {
         lossCount++;
+        document.getElementById("endPic").src = "../images/pikaLost.gif"
         alert("You lost!");
         document.getElementById("lossCounter").innerHTML = lossCount;
         startGame();

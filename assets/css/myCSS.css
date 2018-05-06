@@ -25,3 +25,14 @@ body{
     left: 20%;
 }
 
+.endPic{
+    position: absolute;
+    top:40%;
+    left: 30%;
+    height: 500px;
+    width: 500px;
+    z-index: 4;
+    opacity: 0;
+    float: left;
+}
+
